@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/background.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/nav.css">
+
+  <!-- Javascript -->
+  <script src="javascript/main.js" defer></script>
+  <script src="javascript/background.js" defer></script>
+  <script src="javascript/nav.js" defer></script>
+
+  <title>PaulMangat - Web Design</title>
+</head>
+<body class="BGColor" onload="initBG()">
+
+<!-- Background Animation via HTML Canvas -->
+<div class="background-canvas-container ">
+  <canvas id="canvas"></canvas>
+</div>
+<!-- Content Starts Below -->
+
+
+<!-- *********************** NAVIGATION SECTION ******************** -->
+<!-- ********************************************************* -->
+
+<nav id="nav">
+  <svg>
+    <!-- Menu Button-->
+    <g class="nav-button" id="nav-button">
+      <circle class="nav-button__inner" cx="35" cy="35" r="15"/>
+      <circle class="nav-button__fill"cx="35" cy="35" r="20"/>
+      <circle class="nav-button__outer"cx="35" cy="35" r="25"/>
+      <text class="nav-button__hamburger no-select" x="28" y="40">☰</text>
+    </g>
+    <!-- End Menu button-->
+  </svg>
+
+  <div class="nav-menu" id="nav-menu">
+    
+    <div class="nav__links flex nav__links--flex">
+    <ul>
+      <li><a href="#about" id="nav__link">About</a></li>
+      <li><a href="#work" id="nav__link">Work</a></li>
+      <li><a href="#contact" id="nav__link">Contact</a></li>
+    </ul>
+    </div>
+  </div>
+
+  </div>  <!-- End Menu Links-->
+</nav>
+
+<!-- *********************** LINKDIN ICON ******************** -->
+<!-- ********************************************************* -->
+
+<div class="linkedin"><a href="https://www.linkedin.com/in/paulmangat0">
+  <img src="images/linkedin.png"></a></div>
+
+<!-- *********************** HERO SECTION ******************** -->
+<!-- ********************************************************* -->
+
+<div class="hero mt-xxl">
+  <div class="container flex">
+
+    <div class="hero__name">
+      <div class="hero__title hero__title--BG">
+        <h1 class="hero__firstname">Paul</h1>
+        <h1 class="hero__lastname">Mangat</h1>        
+      </div>
+      <div class="hero__title__subtitle">
+        <h3 id="typewriter">Digital Design</h3>
+      </div>
+    </div>
+
+    <div class="hero__description fade-in-blur">
+      <p>I am a freelance frontend developer based in Toronto, Canada. I build responsive websites to help small businesses strengthen
+        their digital presence with a focus on branding, user experience, and simplicity of design.</p>
+      <br>
+      <p>Want to boost your digital presence? Let's chat.</p>
+         <div class="contact-button">
+          <a href="mailto:paulmangat0@gmail.com"><button class="button1">Get in Touch</button></a>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- *********************** SCROLL ARROW ******************** -->
+<!-- ********************************************************* -->
+
+<div class="scroll flex mt-l">
+  <div class="scroll-text">scroll</div>
+  <div class="scroll-arrow flex">
+    <div class="scroll-arrow__line"></div>
+    <div class="scroll-arrow-triangle"></div>
+  </div>
+</div>
+
+<!-- *********************** ABOUT SECTION ******************* -->
+<!-- ********************************************************* -->
+
+<a name="about"></a>
+<div class="about mt-l"> 
+  <div class="flex">
+    <div class="about--title slide-in-from-bottom" id="scroll-event">about</div>
+  </div>
+  <div class="container">
+   
+    <div class="about__content about__content--grid grid">
+      <div class="about__description about__description--grid slide-in-from-bottom" id="scroll-event">
+        <div class="about__description__title">Overview</div>
+        <div class="about__description__content">
+          <p>
+            Website design should be intentional to encourage and direct customer engagement. 
+            The look and feel of the visuals should clearly align with your brand
+            identity. Collaboration is critical to coming up with the best design for your business.                                    
+          </p>
+        </div>
+      </div>
+      <div class="about__pic flex about__pic--grid slide-in-from-bottom" id="scroll-event">
+        <img src="images/PaulMangat.png">
+      </div>
+      <div class="about__info slide-in-from-bottom" id="scroll-event">
+        <div class="about__info__title">Proposal</div>
+        <div class="about__info__content">
+          <p>
+            The process begins with getting to know your business. Website design is more than function, it is important
+            that the identity of your business shines through online. 
+          </p>
+          </div>
+      </div>
+      <div class="about__info slide-in-from-bottom" id="scroll-event">
+        <div class="about__info__title">Prototype</div>
+        <div class="about__info__content">
+          <p>
+            U/X and U/I concepts are applied to a FIGMA prototype to model the overall design concept and customer interaction of the website. 
+          </p>
+        </div>
+      </div>
+      <div class="about__info slide-in-from-bottom" id="scroll-event">
+        <div class="about__info__title">Publish</div>
+        <div class="about__info__content">
+          <p>
+            Finally, testing occurs across numerous platforms which offers an opportunity to make alterations
+            to guarantee the website is perfectly tailored to your business needs.     
+          </p>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- *********************** PORTFOLIO SECTION ******************* -->
+<!-- ************************************************************* -->
+
+<a name="work"></a>
+<div class="portfolio">   
+  <div class="flex">
+    <div class="portfolio--title slide-in-from-bottom" id="scroll-event">work</div>
+  </div>
+  <div class="container">
+    <div class="work-cards grid work-cards--grid slide-in-from-bottom" id="scroll-event">
+
+      <a href="https://www.safeswitch.ca">
+      <div class="example-card card">
+        <img src="images/work.jpg">
+        <div class="example-details">
+          <h2>Recent Work</h2><br>
+          <p>SafeSwitch - car security company.</p>
+        </div>
+      </div>
+      </a>
+
+      <a href="https://github.com/PaulMangat0">
+      <div class="example-card card">
+        <img src="images/experiments.jpg">
+        <div class="example-details">
+          <h2>Experiments</h2><br>
+          <p>Projects and sample code on GitHub.</p>
+        </div>
+      </div>
+      </a>
+
+      <a href="https://www.youtube.com/channel/UCL4vTItX3FOSMBXKRuMDc4Q/videos">
+      <div class="example-card ">
+        <img src="images/other.jpg">
+        <div class="example-details">
+          <h2>Other</h2><br>
+          <p>Filmed, edited, and built custom animations on a YouTube channel.</p>
+        </div>
+      </div>
+      </a>
+    
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<!-- ************************ CONTACT SECTION ******************** -->
+<!-- ************************************************************* -->
+
+<a name="contact"></a>
+<div class="contact">  
+  <div class="flex">
+    <div class="contact__title  slide-in-from-bottom" id="scroll-event">Contact</div>
+  </div> 
+  <div class="container">
+
+  <div class="contact__comment"><h1>Let's Connect</h1></div>
+  <div class="contact__description"><p>Have a project in mind?<br> Let's talk about building your company's digital presence.</p></div>
+  <div class="contact__email flex contact__email--flex ">
+    <a href="mailto:paulmangat0@gmail.com"><button class="button1">Send Email</button></a>
+  </div>
+
+  </div>
+</div>
+
+</div>
+<!-- **************** FOOTER Section *************** -->
+<!-- ************************************************ -->
+
+<footer>
+  <div class="footer-box flex footer-box--flex mt-xxl">
+    <div>Paul Mangat - ©2022 All rights reserved.</div>    
+    <div>Created with: Vanilla JS, CSS, HTML5</div>
+  </div>
+</footer>
+
+</body>
+</html>

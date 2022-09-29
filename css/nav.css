@@ -1,0 +1,195 @@
+/************************ NAVIGATION SECTION **************/
+/**********************************************************/
+
+
+nav {
+  z-index: 9999;
+  position: fixed;
+  /* width:100vw; 
+  height: 100vh; */
+  top:0;
+  left:0;
+
+  /*Test*/
+  width: 75px;
+  height: 75px;
+  
+}
+
+
+/******************** Nav Button ***********************/
+.nav__button {
+  z-index: 9999;
+}
+
+/** inner **/
+.nav-button__inner {
+  fill:rgba(126, 154, 190,0.3);
+  stroke-width:0;
+  transition: all 1s;
+}
+.nav-button:hover .nav-button__inner {
+  fill:rgba(127, 255, 212,0.5)
+}
+
+
+/** fill **/
+.nav-button__fill {
+  fill:rgba(0, 0,0, 0);
+  stroke:rgba(0,0,0,0);
+  stroke-width:4px;
+}
+
+.nav-button:hover .nav-button__fill {
+  fill:rgba(0, 0,0, 0);
+  stroke:rgba(127, 255, 212,0.6);
+  stroke-width:4px;
+  animation: nav-button__fill-pattern 5s infinite ease-in;
+}
+
+/* animation fill pattern */
+@keyframes nav-button__fill-pattern {
+  0%  {stroke-dasharray:5,0,0,0,0,0;}
+  10% {stroke-dasharray:0,5,0,0,0,0;}
+  20% {stroke-dasharray:0,0,5,0,0,0;}
+  30% {stroke-dasharray:0,0,0,5,0,0;}
+  40% {stroke-dasharray:0,0,0,0,5,0;}
+  50% {stroke-dasharray:0,0,0,0,0,5;} 
+  60% {stroke-dasharray:0,10,0,10,0,10;}
+  70% {stroke-dasharray:0,0,20,0,20,0;}
+  80% {stroke-dasharray:10,0,5,0,20,0;}
+  90% {stroke-dasharray:0,5,0,0,5,0;}
+  100% {stroke-dasharray:0,0,5,0,0,0;}
+}
+
+/** outer **/
+.nav-button__outer {
+  cursor: pointer;
+  fill:rgba(0,0,0,0);
+  stroke:rgba(126, 154, 190,0.2);
+  stroke-width:1;
+  transition: all 1s 1s;
+}
+
+.nav-button:hover .nav-button__outer {
+  stroke:rgba(255, 255, 255,0.8);
+  stroke-width: 1;
+}
+
+/** hamburger **/
+.nav-button__hamburger {
+  cursor: pointer;
+  fill:rgba(255, 255, 255,0.5);
+  transition: all 1s 1.5s;
+}
+
+.nav-button:hover .nav-button__hamburger {
+  fill:rgba(255, 255, 255,0.8);
+  font-weight: 500;
+} 
+
+/**************** Nav Menu **********************/
+
+.nav-menu {
+  z-index: -1;
+  position: fixed;
+  left:-1px;
+  top:0;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  background-color: var(--bgColorLight);
+  transition: all 1s ease;
+  border-right: 1px solid cyan;  
+}
+
+.nav-menu.active {
+  position: fixed;
+  width:60vw;
+  transition: all 1s ease;
+  opacity: 1;
+  backdrop-filter: blur(25px);
+}
+
+@supports not (backdrop-filter:blur(10px)) {
+  .nav-menu.active { 
+    background-color: rgba(126, 154, 190,0.8);
+  }
+}
+
+/**************** Nav Menu Media **********************/
+
+/***** Tablet and Under *****/
+@media(max-width: 768px){
+  .nav-menu.active {
+    width: 100vw;
+  }
+}
+
+/**************** Nav Links **********************/
+
+.nav__links {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;  
+  padding-block: 20vh;
+}
+
+.nav__links--flex {
+  flex-direction: column;
+  align-items: center; 
+}
+
+.nav__links li {
+  margin-block: 2rem;
+  border-bottom: 2px solid rgb(0, 255, 255);
+
+}
+
+.nav__links a {
+  color: white;
+  transition: all 1s ease;
+}
+
+.nav__links a:hover{
+background: linear-gradient(to right,  #FFF 0%, #00ffff 50%,  #FFF 100%);
+background-size: 200% auto;
+color: cyan;
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: backforth 2s linear infinite;
+}
+
+@keyframes backforth {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+@keyframes linkColors {
+  0% {color:red}
+  50% {color:yellow}
+  100% {color:green}
+}
+
+/**************** LINKEDIN ICON **********************/
+.linkedin {
+  position: absolute;
+  background-color: var(--bgColorLight);
+  top:10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.linkedin:hover {
+  background-color: var(--primaryColor);
+}
+
+
+
+
+
+

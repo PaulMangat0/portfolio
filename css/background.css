@@ -1,0 +1,25 @@
+
+
+.BGColor {
+  background:  url("../images/White-Bokeh.jpg"), rgb(19, 47, 99);
+  background-blend-mode: multiply; 
+  background-repeat: no-repeat;
+}
+
+
+.background-canvas-container {
+  z-index: -10; 
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  animation: fadeInBG 3s ease-in;
+}
+
+
+/* slight fade in */
+@keyframes fadeInBG {
+  from {background-color:rgb(126, 154, 190);}
+  to {background-color:rgba(0, 0, 0, 0);}
+}
