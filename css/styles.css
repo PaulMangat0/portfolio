@@ -229,7 +229,7 @@ border: 2px solid cyan;
 
 .about__info__content,
 .about__description__content {
-  font-size: 0.8rem;
+  font-size: max(0.8rem,1vw);
   padding: 1rem;
 }  
 
