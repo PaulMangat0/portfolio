@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Search Puzzle Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <h1>Word Search Generator</h1>
+        <p>Create customizable word searches with contextual sentence clues.</p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Input Section (Hidden when printing) -->
+      <section class="control-panel no-print">
+        <h2 class="panel-title">Puzzle Settings</h2>
+        
+        <div class="form-group">
+          <label for="puzzle-title">Puzzle Title</label>
+
+          <input type="text" id="puzzle-title" placeholder="e.g., Solar System Exploration" value="Solar System Exploration">
+        </div>
+
+        <div class="form-group">
+          <label for="sentence-input">
+            Sentences 
+            <span class="label-hint">(Include ONE capitalized target word per sentence)</span>
+          </label>
+          <textarea id="sentence-input" rows="8" placeholder="Type sentences here...">The SUN is the star at the center of our solar system.
+EARTH is the third planet from the sun.
+The MOON orbits around our planet every month.
+MARS is known as the Red Planet.
+JUPITER is the largest planet in our solar system.
+SATURN has prominent rings made of ice and dust.</textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="slider-header">
+            <label for="grid-size">Grid Size</label>
+            <span id="grid-size-val" class="badge">12 x 12</span>
+          </div>
+          <input type="range" id="grid-size" min="8" max="25" value="12">
+          <div class="slider-footer">
+            <span id="min-size-label">Min: 8x8</span>
+            <span>Max: 25x25</span>
+          </div>
+        </div>
+
+        <button id="generate-btn" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          Generate Word Search
+        </button>
+      </section>
+
+      <!-- Output Section / Worksheet -->
+      <section id="worksheet-section" class="worksheet-panel">
+        <div class="worksheet-header">
+          <h2 id="display-title" class="worksheet-title">Solar System Exploration</h2>
+          
+          <div class="action-bar no-print">
+            <button id="toggle-solution-btn" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Show Solution
+            </button>
+            <button id="print-btn" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Worksheet
+            </button>
+          </div>
+        </div>
+
+        <!-- Word Search Grid -->
+        <div class="grid-wrapper">
+          <div id="word-search-grid" class="word-search-grid"></div>
+        </div>
+
+        <!-- Sentence Clues Output -->
+        <div class="clues-container">
+          <h3 class="clues-heading">Sentence Clues</h3>
+          <ol id="sentence-clues-list" class="clues-list"></ol>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
